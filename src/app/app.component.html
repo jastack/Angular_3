@@ -22,7 +22,9 @@
     *ngIf="showPassword">
     Secret password = tuna
   </p>
-  <p *ngFor="let click of buttonClicks">
+  <p *ngFor="let click of buttonClicks"
+    [ngStyle]="{backgroundColor: getColor(click)}"
+    [ngClass]="{aboveFive: click >= 5}">
     {{click}}
   </p>
 </div>

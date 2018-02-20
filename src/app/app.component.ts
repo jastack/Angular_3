@@ -3,7 +3,12 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styles: [`
+    .aboveFive {
+      color: white;
+      border: 5 px solid red;
+    }
+  `]
 })
 export class AppComponent {
   showPassword = false;
@@ -18,5 +23,9 @@ export class AppComponent {
     } else {
       this.showPassword = true;
     }
+  }
+
+  getColor(e) {
+    return e >= 5 ? 'blue' : 'white';
   }
 }
